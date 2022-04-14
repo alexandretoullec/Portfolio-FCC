@@ -1,0 +1,242 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --clr-dark: #303030;
+    --clr-white:#FFFFFF;
+    --clr-red:rgba(246, 71, 71,1);
+    --clr-blue:rgba(75,119,190,1);
+    --ff-first:Arial, Helvetica, sans-serif;
+
+    --fs-base:1.2rem;
+    --fs-h1:5rem;
+    --ls-base:0.5rem;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+body{
+    background: var(--clr-dark);
+    color:var(--clr-white);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: var(--ff-first)
+}
+
+nav,header{
+    background: var(--clr-red);
+    position:fixed;
+    overflow: hidden;
+    top: 0;
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    order: 1000;
+}
+
+nav a{
+    list-style: none;
+    color: var(--clr-white);
+    font-style: inherit;
+    font-size: var(--fs-base);
+    text-decoration: none;
+    margin: 2rem;
+    cursor: pointer;
+}
+
+
+
+#welcome-section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1{
+    font-size: var(--fs-h1);
+}
+
+h2{
+    font-style: italic;
+    color: var(--clr-red);
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+#projects{
+    background-color: var(--clr-blue);
+    width: 99vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.projects{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.project-title{
+    display: flex;
+    width: 100%;
+}
+
+#projects h3{
+    border-bottom: 2px solid;
+    padding: 8rem 0.5rem 1rem 0.5rem;
+    margin-bottom: 3rem;
+    font-size: 3rem;
+}
+
+.project-desc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.project-title-bis{
+    padding: 2rem;
+    background-color: var(--clr-dark);
+    
+    text-align: center;
+    font-size: var(--fs-base);
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--clr-white);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hide{
+    display: none;
+}
+
+a:hover + .hide {
+    display: block;
+}
+
+.project-desc img{
+    object-fit: cover;
+    width: 30rem;
+    height: 30rem;
+    letter-spacing: var(--ls-base);
+}
+
+#projects button{
+    color: var(--clr-white);
+    border: none;
+    background-color: var(--clr-dark);
+    padding: 1rem;
+    font-size: 1.2rem;
+    margin: 3rem 0 2rem 0;
+    cursor: pointer;
+}
+
+#Contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    
+}
+
+#Contact h2{
+    color: var(--clr-white);
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+.social-list{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem auto;
+}
+
+.social-list__item{
+    display: flex;
+    /* width: 100%; */
+    margin: 3rem;
+    transition: 0.5s;
+}
+
+.social-list__item:hover{
+    margin-bottom: 2rem;
+}
+
+.social-list__item a{
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: 100;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: var(--clr-white);
+    gap: 0.5rem;
+}
+
+
+
+footer{
+    height: 10vh;
+    border-top: 3px solid var(--clr-red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+footer p {
+    width: 60%;
+    margin-left: 20rem;
+    font-size: var(--fs-base);
+    letter-spacing: 0.05rem;
+    font-weight: 100;
+}
+footer a {
+    width: 30%;
+    font-size: var(--fs-base);
+    letter-spacing: 0.05rem;
+    font-weight: 100;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--clr-white);
+}
+
+
